@@ -1,0 +1,1026 @@
+/* =========================================
+   DOOVLY
+========================================= */
+
+:root {
+  --green: #08a653;
+  --dark-green: #087d42;
+  --light-green: #e7faef;
+  --black: #080b19;
+  --gray: #555d69;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #ffffff;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  position: relative;
+  z-index: 100;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-inner {
+  width: min(1200px, calc(100% - 90px));
+  height: 82px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+}
+
+
+/* Logo */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+}
+
+.brand img {
+  width: 175px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* Home */
+
+.nav-home {
+  justify-self: center;
+}
+
+.nav-home a {
+  position: relative;
+
+  color: var(--black);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 10px 3px;
+}
+
+.nav-home a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 1px;
+
+  height: 2px;
+
+  background: var(--green);
+
+  border-radius: 10px;
+}
+
+
+/* Download */
+
+.nav-download {
+  justify-self: end;
+
+  padding: 13px 27px;
+
+  border-radius: 30px;
+
+  background: var(--green);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.nav-download:hover {
+  background: var(--dark-green);
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(8, 166, 83, 0.22);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 570px;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 5;
+
+  width: min(1200px, calc(100% - 90px));
+
+  min-height: 570px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 39% 61%;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   BACKGROUND BLOBS
+========================================= */
+
+.blob {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.blob-1 {
+  width: 410px;
+  height: 410px;
+
+  left: -190px;
+  top: 120px;
+
+  background: #d9f9e6;
+}
+
+.blob-2 {
+  width: 330px;
+  height: 330px;
+
+  left: -110px;
+  top: 220px;
+
+  background: rgba(46, 214, 123, 0.30);
+}
+
+.blob-3 {
+  width: 430px;
+  height: 430px;
+
+  right: -170px;
+  top: 80px;
+
+  background: #dcfae8;
+}
+
+.blob-4 {
+  width: 340px;
+  height: 340px;
+
+  right: -80px;
+  top: 170px;
+
+  background: rgba(31, 204, 111, 0.25);
+}
+
+.blob-5 {
+  width: 260px;
+  height: 260px;
+
+  left: 40%;
+  bottom: -210px;
+
+  background: rgba(150, 242, 184, 0.35);
+}
+
+
+/* =========================================
+   HERO COPY
+========================================= */
+
+.hero-copy {
+  position: relative;
+  z-index: 10;
+
+  padding-top: 5px;
+}
+
+.hero-tag {
+  width: fit-content;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  background: #e5f9ed;
+
+  color: var(--dark-green);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  margin-bottom: 17px;
+}
+
+.hero-copy h1 {
+  color: var(--black);
+
+  font-size: clamp(48px, 5vw, 67px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.hero-copy h1 span {
+  color: var(--green);
+}
+
+.hero-copy p {
+  max-width: 480px;
+
+  margin-top: 20px;
+
+  color: #414956;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   STORE BADGES
+========================================= */
+
+.store-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.store-badge {
+  width: 174px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 13px;
+
+  background: #050505;
+
+  color: white;
+
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+}
+
+.store-badge:hover {
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.store-badge > i {
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+.store-badge div {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-badge small {
+  font-size: 7px;
+
+  line-height: 1;
+
+  margin-bottom: 4px;
+}
+
+.store-badge strong {
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.hero-visual {
+  position: relative;
+
+  height: 570px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+.phone-container {
+  position: relative;
+  z-index: 20;
+
+  width: 275px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.phone-image {
+  width: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 22px 25px rgba(0, 80, 40, 0.20)
+  );
+
+  transition: 0.35s ease;
+}
+
+.phone-image:hover {
+  transform: translateY(-8px);
+}
+
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.service-card {
+  position: absolute;
+
+  z-index: 30;
+
+  width: 190px;
+
+  min-height: 180px;
+
+  padding: 22px 20px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 40px rgba(16, 50, 30, 0.10);
+
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+  box-shadow:
+    0 25px 55px rgba(8, 140, 70, 0.18);
+
+  transform: translateY(-9px) rotate(0deg);
+}
+
+.professional-card {
+  left: 0;
+
+  top: 130px;
+
+  transform: rotate(-5deg);
+}
+
+.skill-card {
+  right: -5px;
+
+  top: 145px;
+
+  transform: rotate(5deg);
+}
+
+
+/* Icon */
+
+.service-icon {
+  width: 51px;
+  height: 51px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  margin-bottom: 16px;
+
+  font-size: 21px;
+}
+
+.green-icon {
+  background: #e4faed;
+
+  color: var(--green);
+}
+
+.orange-icon {
+  background: #fff0e9;
+
+  color: #f27522;
+}
+
+
+/* Card text */
+
+.service-card h3 {
+  color: var(--black);
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  margin-bottom: 7px;
+}
+
+.service-card p {
+  color: #555d69;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  margin-bottom: 10px;
+}
+
+
+/* Arrow */
+
+.card-arrow {
+  width: 34px;
+  height: 34px;
+
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f9ef;
+
+  color: var(--green);
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.service-card:hover .card-arrow {
+  background: var(--green);
+
+  color: white;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   VISUAL LABELS
+========================================= */
+
+.visual-label {
+  position: absolute;
+
+  z-index: 10;
+
+  color: var(--dark-green);
+
+  font-family: cursive;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  font-weight: 600;
+}
+
+.book-label {
+  left: 90px;
+
+  bottom: 34px;
+
+  text-align: left;
+}
+
+.offer-label {
+  right: 72px;
+
+  bottom: 30px;
+
+  text-align: right;
+}
+
+.label-arrow {
+  font-family: Arial, sans-serif;
+
+  font-size: 40px;
+
+  line-height: 0.8;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+  position: relative;
+
+  z-index: 50;
+
+  width: min(1100px, calc(100% - 80px));
+
+  margin: -2px auto 50px;
+
+  min-height: 105px;
+
+  padding: 20px 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+
+  align-items: center;
+
+  background: #f1fbf5;
+
+  border-radius: 20px;
+
+  border: 1px solid #e0f3e7;
+}
+
+.stat {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d9f8e5;
+
+  color: var(--green);
+
+  font-size: 23px;
+}
+
+.stat strong {
+  display: block;
+
+  color: var(--black);
+
+  font-size: 25px;
+
+  line-height: 1.1;
+}
+
+.stat span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #3f4651;
+
+  font-size: 12px;
+}
+
+.stat-line {
+  width: 1px;
+
+  height: 52px;
+
+  background: #d5e9dc;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar-inner,
+  .hero-inner {
+    width: calc(100% - 50px);
+  }
+
+  .hero-copy h1 {
+    font-size: 51px;
+  }
+
+  .service-card {
+    width: 170px;
+  }
+
+  .phone-container {
+    width: 250px;
+  }
+
+  .professional-card {
+    left: -15px;
+  }
+
+  .skill-card {
+    right: -15px;
+  }
+
+  .book-label {
+    left: 50px;
+  }
+
+  .offer-label {
+    right: 35px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .navbar-inner {
+    width: calc(100% - 30px);
+
+    height: 72px;
+
+    grid-template-columns: 1fr auto;
+  }
+
+  .brand img {
+    width: 145px;
+  }
+
+  .nav-home {
+    display: none;
+  }
+
+  .nav-download {
+    padding: 11px 17px;
+
+    font-size: 12px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    width: calc(100% - 30px);
+
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    padding-top: 30px;
+
+    text-align: center;
+  }
+
+  .hero-tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-copy h1 {
+    font-size: 42px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-copy p {
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 14px;
+  }
+
+
+  /* Store buttons */
+
+  .store-buttons {
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+  .store-badge {
+    width: 157px;
+
+    height: 49px;
+  }
+
+  .store-badge > i {
+    font-size: 25px;
+  }
+
+  .store-badge strong {
+    font-size: 14px;
+  }
+
+
+  /* Visual */
+
+  .hero-visual {
+    width: 100%;
+
+    height: 610px;
+
+    margin-top: 5px;
+  }
+
+  .phone-container {
+    width: 245px;
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 15px;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+  }
+
+  .phone-image:hover {
+    transform: none;
+  }
+
+
+  /* Cards */
+
+  .service-card {
+    width: 160px;
+
+    min-height: 155px;
+
+    padding: 17px;
+
+    border-radius: 19px;
+  }
+
+  .professional-card {
+    left: -4px;
+
+    top: 105px;
+
+    transform: rotate(-5deg) scale(0.82);
+  }
+
+  .skill-card {
+    right: -4px;
+
+    top: 125px;
+
+    transform: rotate(5deg) scale(0.82);
+  }
+
+  .service-card:hover {
+    transform: translateY(-7px) rotate(0deg) scale(0.82);
+  }
+
+  .service-icon {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 11px;
+
+    font-size: 18px;
+  }
+
+  .service-card h3 {
+    font-size: 13px;
+  }
+
+  .service-card p {
+    font-size: 10px;
+  }
+
+
+  /* Labels */
+
+  .book-label {
+    left: 25px;
+
+    bottom: 15px;
+
+    font-size: 17px;
+  }
+
+  .offer-label {
+    right: 20px;
+
+    bottom: 15px;
+
+    font-size: 17px;
+  }
+
+  .label-arrow {
+    font-size: 30px;
+  }
+
+
+  /* Stats */
+
+  .stats {
+    width: calc(100% - 30px);
+
+    margin-top: 0;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .stat {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+  .stat-line {
+    width: 85%;
+
+    height: 1px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .brand img {
+    width: 130px;
+  }
+
+  .nav-download {
+    padding: 10px 14px;
+
+    font-size: 11px;
+  }
+
+  .hero-copy h1 {
+    font-size: 37px;
+  }
+
+  .hero-copy p {
+    font-size: 13px;
+  }
+
+  .store-badge {
+    width: 145px;
+
+    padding: 6px 9px;
+  }
+
+  .store-badge strong {
+    font-size: 12px;
+  }
+
+  .store-badge small {
+    font-size: 6px;
+  }
+
+  .phone-container {
+    width: 225px;
+  }
+
+  .service-card {
+    width: 145px;
+  }
+
+  .professional-card {
+    left: -12px;
+  }
+
+  .skill-card {
+    right: -12px;
+  }
+
+  .stat strong {
+    font-size: 22px;
+  }
+}
