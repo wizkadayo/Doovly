@@ -1,24 +1,139 @@
 import "./App.css";
+
 import doovlyLogo from "./assets/doovly-logo.png";
 import doovlyPhone from "./assets/doovly-phone.png";
+import verifiedUsersIcon from "./assets/doovly-verified-users-icon.png";
+
+
+/* =========================================
+   GOOGLE PLAY MULTICOLOR ICON
+========================================= */
+
+function GooglePlayIcon() {
+  return (
+    <svg
+      className="google-play-icon"
+      viewBox="0 0 48 48"
+      aria-hidden="true"
+    >
+      <path
+        fill="#00D7FF"
+        d="M5.4 4.8C4.5 5.8 4 7.3 4 9.4v29.2c0 2.1.5 3.6 1.4 4.6L29 24 5.4 4.8z"
+      />
+
+      <path
+        fill="#00F076"
+        d="M36.8 31.8L29 24 5.4 43.2c.9.9 2.4 1 3.9.2l27.5-11.6z"
+      />
+
+      <path
+        fill="#FFCF00"
+        d="M36.8 16.2L9.3 4.6c-1.5-.8-3-.7-3.9.2L29 24l7.8-7.8z"
+      />
+
+      <path
+        fill="#FF3B30"
+        d="M43.1 21.9l-6.3-5.7L29 24l7.8 7.8 6.3-5.7c1.9-1.7 1.9-4.5 0-6.2z"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================
+   CURVED BOOK ARROW
+========================================= */
+
+function BookArrow() {
+  return (
+    <svg
+      className="curved-arrow book-arrow"
+      viewBox="0 0 150 110"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M12 91C25 68 46 54 72 51C99 48 120 34 132 12"
+        stroke="#087D42"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M118 13L132 12L128 27"
+        stroke="#087D42"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================
+   CURVED OFFER ARROW
+========================================= */
+
+function OfferArrow() {
+  return (
+    <svg
+      className="curved-arrow offer-arrow"
+      viewBox="0 0 150 110"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M138 91C125 68 104 54 78 51C51 48 30 34 18 12"
+        stroke="#087D42"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M32 13L18 12L22 27"
+        stroke="#087D42"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 
 function App() {
   return (
     <div className="doovly-site">
 
-      {/* ================= NAVBAR ================= */}
+      {/* =========================================
+          NAVBAR
+      ========================================= */}
+
       <header className="navbar">
         <div className="navbar-inner">
 
           <a href="#home" className="brand">
-            <img src={doovlyLogo} alt="Doovly Service Marketplace" />
+            <img
+              src={doovlyLogo}
+              alt="Doovly Service Marketplace"
+            />
           </a>
 
+
           <nav className="nav-home">
-            <a href="#home">Home</a>
+            <a href="#home">
+              Home
+            </a>
           </nav>
 
-          <a href="#download" className="nav-download">
+
+          <a
+            href="#download"
+            className="nav-download"
+          >
             Download App
           </a>
 
@@ -26,12 +141,15 @@ function App() {
       </header>
 
 
-      {/* ================= HERO ================= */}
+      {/* =========================================
+          HOME / HERO
+      ========================================= */}
+
       <main id="home">
 
         <section className="hero">
 
-          {/* Background decoration */}
+          {/* Decorative background */}
           <div className="blob blob-1"></div>
           <div className="blob blob-2"></div>
           <div className="blob blob-3"></div>
@@ -41,20 +159,28 @@ function App() {
 
           <div className="hero-inner">
 
-            {/* LEFT CONTENT */}
+            {/* =====================================
+                LEFT HERO CONTENT
+            ===================================== */}
+
             <div className="hero-copy">
 
               <div className="hero-tag">
                 FOR EVERYONE
               </div>
 
+
               <h1>
                 Book or Offer
                 <br />
                 Services
                 <br />
-                <span>It’s Up to You.</span>
+
+                <span>
+                  It’s Up to You.
+                </span>
               </h1>
+
 
               <p>
                 One app. No strict roles. Whether you need a
@@ -63,28 +189,51 @@ function App() {
               </p>
 
 
-              {/* APP STORE BUTTONS */}
+              {/* =================================
+                  STORE BUTTONS
+              ================================= */}
+
               <div className="store-buttons">
 
-                <a href="#download" className="store-badge">
+                {/* Google Play */}
 
-                  <i className="bi bi-google-play"></i>
+                <a
+                  href="#download"
+                  className="store-badge"
+                >
 
-                  <div>
-                    <small>GET IT ON</small>
-                    <strong>Google Play</strong>
+                  <GooglePlayIcon />
+
+                  <div className="store-copy">
+                    <small>
+                      GET IT ON
+                    </small>
+
+                    <strong>
+                      Google Play
+                    </strong>
                   </div>
 
                 </a>
 
 
-                <a href="#download" className="store-badge">
+                {/* App Store */}
 
-                  <i className="bi bi-apple"></i>
+                <a
+                  href="#download"
+                  className="store-badge"
+                >
 
-                  <div>
-                    <small>Download on the</small>
-                    <strong>App Store</strong>
+                  <i className="fa-brands fa-apple apple-store-icon"></i>
+
+                  <div className="store-copy">
+                    <small>
+                      Download on the
+                    </small>
+
+                    <strong>
+                      App Store
+                    </strong>
                   </div>
 
                 </a>
@@ -94,32 +243,49 @@ function App() {
             </div>
 
 
-            {/* HERO VISUAL */}
+            {/* =====================================
+                HERO VISUAL
+            ===================================== */}
+
             <div className="hero-visual">
 
 
-              {/* PROFESSIONAL CARD */}
+              {/* =================================
+                  PROFESSIONAL CARD
+              ================================= */}
+
               <div className="service-card professional-card">
 
                 <div className="service-icon green-icon">
-                  <i className="bi bi-person-check-fill"></i>
+                  <i className="fa-solid fa-user-check"></i>
                 </div>
 
-                <h3>Need a Professional?</h3>
+
+                <h3>
+                  Need a Professional?
+                </h3>
+
 
                 <p>
                   Find and book verified experts
                   for any service.
                 </p>
 
-                <div className="card-arrow">
+
+                <button
+                  className="card-arrow"
+                  aria-label="Find a professional"
+                >
                   →
-                </div>
+                </button>
 
               </div>
 
 
-              {/* PHONE */}
+              {/* =================================
+                  PHONE IMAGE
+              ================================= */}
+
               <div className="phone-container">
 
                 <img
@@ -131,51 +297,66 @@ function App() {
               </div>
 
 
-              {/* SKILL CARD */}
+              {/* =================================
+                  SKILL CARD
+              ================================= */}
+
               <div className="service-card skill-card">
 
                 <div className="service-icon orange-icon">
-                  <i className="bi bi-graph-up-arrow"></i>
+                  <i className="fa-solid fa-chart-line"></i>
                 </div>
 
-                <h3>Have a Skill?</h3>
+
+                <h3>
+                  Have a Skill?
+                </h3>
+
 
                 <p>
                   Add your services and start
                   earning.
                 </p>
 
-                <div className="card-arrow">
+
+                <button
+                  className="card-arrow"
+                  aria-label="Offer your services"
+                >
                   →
-                </div>
+                </button>
 
               </div>
 
 
-              {/* BOOK SERVICES */}
-              <div className="visual-label book-label">
+              {/* =================================
+                  BOOK SERVICES CURVED ARROW
+              ================================= */}
 
-                <div className="label-arrow">
-                  ↗
-                </div>
+              <div className="service-direction book-direction">
+
+                <BookArrow />
 
                 <span>
-                  Book<br />
+                  Book
+                  <br />
                   Services
                 </span>
 
               </div>
 
 
-              {/* OFFER SERVICES */}
-              <div className="visual-label offer-label">
+              {/* =================================
+                  OFFER SERVICES CURVED ARROW
+              ================================= */}
 
-                <div className="label-arrow">
-                  ↖
-                </div>
+              <div className="service-direction offer-direction">
+
+                <OfferArrow />
 
                 <span>
-                  Offer<br />
+                  Offer
+                  <br />
                   Services
                 </span>
 
@@ -188,18 +369,28 @@ function App() {
         </section>
 
 
-        {/* ================= STATS ================= */}
+        {/* =========================================
+            STATS
+        ========================================= */}
+
         <section className="stats">
 
+          {/* Active Users */}
+
           <div className="stat">
 
-            <div className="stat-icon">
-              <i className="bi bi-people-fill"></i>
+            <div className="stat-icon users-icon">
+              <i className="fa-solid fa-users"></i>
             </div>
 
-            <div>
-              <strong>10K+</strong>
-              <span>Active Users</span>
+            <div className="stat-text">
+              <strong>
+                10K+
+              </strong>
+
+              <span>
+                Active Users
+              </span>
             </div>
 
           </div>
@@ -208,15 +399,25 @@ function App() {
           <div className="stat-line"></div>
 
 
+          {/* Verified Professionals */}
+
           <div className="stat">
 
-            <div className="stat-icon">
-              <i className="bi bi-shield-check"></i>
-            </div>
+            <div className="stat-icon verified-icon">
+  <img
+    src={verifiedUsersIcon}
+    alt="Verified professionals"
+  />
+</div>
 
-            <div>
-              <strong>5K+</strong>
-              <span>Verified Professionals</span>
+            <div className="stat-text">
+              <strong>
+                5K+
+              </strong>
+
+              <span>
+                Verified Professionals
+              </span>
             </div>
 
           </div>
@@ -225,15 +426,22 @@ function App() {
           <div className="stat-line"></div>
 
 
+          {/* Average Rating */}
+
           <div className="stat">
 
-            <div className="stat-icon">
-              <i className="bi bi-star-fill"></i>
+            <div className="stat-icon rating-icon">
+              <i className="fa-solid fa-star"></i>
             </div>
 
-            <div>
-              <strong>4.8 ★</strong>
-              <span>Average Rating</span>
+            <div className="stat-text">
+              <strong>
+                4.8 ★
+              </strong>
+
+              <span>
+                Average Rating
+              </span>
             </div>
 
           </div>
