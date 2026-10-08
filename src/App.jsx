@@ -612,7 +612,7 @@ function App() {
           </h3>
 
           <p>
-            Find trusted professionals near you.
+            Find trusted<br/>professionals near you.
           </p>
 
         </div>
@@ -694,7 +694,7 @@ function App() {
           </h3>
 
           <p>
-            Pay securely and get the job done.
+            Pay securely and get<br/>the job done.
           </p>
 
         </div>
