@@ -556,7 +556,9 @@ function App() {
 
   <div className="how-it-works-inner">
 
-    {/* Section Heading */}
+    {/* =================================
+        HEADER
+    ================================= */}
 
     <div className="how-header">
 
@@ -586,13 +588,15 @@ function App() {
     </div>
 
 
-    {/* Steps */}
+    {/* =================================
+        THREE STEPS
+    ================================= */}
 
     <div className="how-steps">
 
 
       {/* =================================
-          STEP 1
+          STEP 1 — SEARCH
       ================================= */}
 
       <div className="how-step-card step-search">
@@ -608,8 +612,7 @@ function App() {
           </h3>
 
           <p>
-            Find trusted <br />professionals
-            near you.
+            Find trusted professionals near you.
           </p>
 
         </div>
@@ -617,7 +620,7 @@ function App() {
         <div className="step-image">
 
           <img
-            src="/src/assets/search.png"
+            src={searchImage}
             alt="Search for professionals"
           />
 
@@ -626,7 +629,7 @@ function App() {
       </div>
 
 
-      {/* Arrow */}
+      {/* Connector */}
 
       <div className="step-connector">
         →
@@ -634,7 +637,7 @@ function App() {
 
 
       {/* =================================
-          STEP 2
+          STEP 2 — BOOK
       ================================= */}
 
       <div className="how-step-card step-book">
@@ -658,7 +661,7 @@ function App() {
         <div className="step-image">
 
           <img
-            src="/src/assets/book-us.png"
+            src={bookUsImage}
             alt="Book a service"
           />
 
@@ -667,7 +670,7 @@ function App() {
       </div>
 
 
-      {/* Arrow */}
+      {/* Connector */}
 
       <div className="step-connector">
         →
@@ -675,7 +678,7 @@ function App() {
 
 
       {/* =================================
-          STEP 3
+          STEP 3 — PAY
       ================================= */}
 
       <div className="how-step-card step-pay">
@@ -691,8 +694,7 @@ function App() {
           </h3>
 
           <p>
-            Pay securely and
-            <br />get the job done.
+            Pay securely and get the job done.
           </p>
 
         </div>
@@ -700,7 +702,7 @@ function App() {
         <div className="step-image">
 
           <img
-            src="/src/assets/pay.png"
+            src={payImage}
             alt="Pay and relax"
           />
 
