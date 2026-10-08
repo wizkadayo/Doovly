@@ -3,9 +3,9 @@ import "./App.css";
 import doovlyLogo from "./assets/doovly-logo.png";
 import doovlyPhone from "./assets/doovly-phone.png";
 import verifiedUsersIcon from "./assets/doovly-verified-users-icon.png";
-import bookArrow from "./assets/book-arrow.png";
-import offerArrow from "./assets/offer-arrow.png";
-
+import securedPaymentIcon from "./assets/secured-payment.png";
+import offerServicesIcon from "./assets/offer-services.png";
+import easyToUseIcon from "./assets/easy-to-use.png";
 
 /* =========================================
    GOOGLE PLAY MULTICOLOR ICON
@@ -275,12 +275,6 @@ function App() {
 
               <div className="service-direction book-direction">
 
-                <img
-                  src={bookArrow}
-                  alt=""
-                  className="flaticon-arrow book-arrow"
-                />
-
                 <span>
                   Book
                   <br />
@@ -295,12 +289,6 @@ function App() {
               ================================= */}
 
               <div className="service-direction offer-direction">
-
-                <img
-                  src={offerArrow}
-                  alt=""
-                  className="flaticon-arrow offer-arrow"
-                />
 
                 <span>
                   Offer
@@ -395,6 +383,333 @@ function App() {
           </div>
 
         </section>
+
+
+        {/* =========================================
+    FEATURES
+========================================= */}
+
+<section className="features-section" id="features">
+
+  <div className="features-inner">
+
+    {/* =================================
+        FEATURES INTRO
+    ================================= */}
+
+    <div className="features-intro">
+
+      <div className="section-tag">
+        FEATURES
+      </div>
+
+      <h2>
+        Everything You Need,
+        <br />
+        All in One App.
+      </h2>
+
+      <p>
+        Doovly makes it simple, fast and reliable
+        to find trusted professionals or offer your
+        own services.
+      </p>
+
+      <a
+        href="#download"
+        className="features-download"
+      >
+        Download App
+      </a>
+
+    </div>
+
+
+    {/* =================================
+        FEATURE CARDS
+    ================================= */}
+
+    <div className="features-grid">
+
+
+      {/* Verified Professionals */}
+
+      <div className="feature-card">
+
+        <div className="feature-icon">
+
+          <img
+            src={verifiedUsersIcon}
+            alt="Verified professionals"
+          />
+
+        </div>
+
+        <h3>
+          Verified
+          <br />
+          Professionals
+        </h3>
+
+        <p>
+          Book with confidence.
+          All professionals are
+          verified and reviewed.
+        </p>
+
+      </div>
+
+
+      {/* Secure Payments */}
+
+      <div className="feature-card">
+
+        <div className="feature-icon">
+
+          <img
+            src={securedPaymentIcon}
+            alt="Secure payments"
+          />
+
+        </div>
+
+        <h3>
+          Secure
+          <br />
+          Payments
+        </h3>
+
+        <p>
+          Pay safely with secure payments.
+          Your money is protected.
+        </p>
+
+      </div>
+
+
+      {/* Offer Your Services */}
+
+      <div className="feature-card">
+
+        <div className="feature-icon">
+
+          <img
+            src={offerServicesIcon}
+            alt="Offer your services"
+          />
+
+        </div>
+
+        <h3>
+          Offer Your
+          <br />
+          Services
+        </h3>
+
+        <p>
+          Add your skills and start earning
+          on your own terms.
+        </p>
+
+      </div>
+
+
+      {/* Easy To Use */}
+
+      <div className="feature-card">
+
+        <div className="feature-icon">
+
+          <img
+            src={easyToUseIcon}
+            alt="Easy to use"
+          />
+
+        </div>
+
+        <h3>
+          Easy to Use
+        </h3>
+
+        <p>
+          A simple and clean app designed
+          for everyone.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{/* =========================================
+    HOW IT WORKS
+========================================= */}
+
+<section className="how-it-works" id="how-it-works">
+
+  <div className="how-it-works-inner">
+
+    {/* Section Heading */}
+
+    <div className="how-header">
+
+      <div>
+
+        <div className="section-tag">
+          HOW IT WORKS
+        </div>
+
+        <h2>
+          Get the service you need
+          <br />
+          in <span>3 simple steps.</span>
+        </h2>
+
+      </div>
+
+
+      <a
+        href="#how-it-works"
+        className="how-see-button"
+      >
+        See How It Works
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    {/* Steps */}
+
+    <div className="how-steps">
+
+
+      {/* =================================
+          STEP 1
+      ================================= */}
+
+      <div className="how-step-card step-search">
+
+        <div className="step-number">
+          1
+        </div>
+
+        <div className="step-content">
+
+          <h3>
+            Search
+          </h3>
+
+          <p>
+            Find trusted <br />professionals
+            near you.
+          </p>
+
+        </div>
+
+        <div className="step-image">
+
+          <img
+            src="/src/assets/search.png"
+            alt="Search for professionals"
+          />
+
+        </div>
+
+      </div>
+
+
+      {/* Arrow */}
+
+      <div className="step-connector">
+        →
+      </div>
+
+
+      {/* =================================
+          STEP 2
+      ================================= */}
+
+      <div className="how-step-card step-book">
+
+        <div className="step-number">
+          2
+        </div>
+
+        <div className="step-content">
+
+          <h3>
+            Book
+          </h3>
+
+          <p>
+            Choose a service, date<br/>and time that works for you.
+          </p>
+
+        </div>
+
+        <div className="step-image">
+
+          <img
+            src="/src/assets/book-us.png"
+            alt="Book a service"
+          />
+
+        </div>
+
+      </div>
+
+
+      {/* Arrow */}
+
+      <div className="step-connector">
+        →
+      </div>
+
+
+      {/* =================================
+          STEP 3
+      ================================= */}
+
+      <div className="how-step-card step-pay">
+
+        <div className="step-number">
+          3
+        </div>
+
+        <div className="step-content">
+
+          <h3>
+            Pay & Relax
+          </h3>
+
+          <p>
+            Pay securely and
+            <br />get the job done.
+          </p>
+
+        </div>
+
+        <div className="step-image">
+
+          <img
+            src="/src/assets/pay.png"
+            alt="Pay and relax"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       </main>
 
