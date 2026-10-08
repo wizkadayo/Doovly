@@ -6,6 +6,9 @@ import verifiedUsersIcon from "./assets/doovly-verified-users-icon.png";
 import securedPaymentIcon from "./assets/secured-payment.png";
 import offerServicesIcon from "./assets/offer-services.png";
 import easyToUseIcon from "./assets/easy-to-use.png";
+import searchImage from "./assets/search.png";
+import bookUsImage from "./assets/book-us.png";
+import payImage from "./assets/pay.png";
 
 /* =========================================
    GOOGLE PLAY MULTICOLOR ICON
