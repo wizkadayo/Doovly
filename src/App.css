@@ -670,78 +670,145 @@ button {
 
 
 /* =========================================
-   BOOK / OFFER SERVICE DIRECTIONS
+   BOOK / OFFER SERVICE LABELS
 ========================================= */
 
 .service-direction {
   position: absolute;
 
-  z-index: 12;
-
-  display: flex;
-
-  flex-direction: column;
+  z-index: 40;
 
   color: var(--dark-green);
 
-  font-family: "Inter", sans-serif;
+  font-family: cursive;
 
-  font-size: 18px;
+  font-size: 20px;
 
-  font-weight: 600;
+  font-weight: 500;
 
-  line-height: 1.1;
+  line-height: 1.05;
 
   pointer-events: none;
 }
 
 
-/* SVG */
-
-.curved-arrow {
-  width: 120px;
-
-  height: 88px;
-
-  overflow: visible;
-}
-
-
-/* Book */
+/* Book Services */
 
 .book-direction {
-  left: 80px;
+  left: 75px;
 
-  bottom: 18px;
+  top: 360px;
 
-  align-items: flex-start;
+  text-align: left;
 }
 
-.book-direction .curved-arrow {
-  margin-left: 17px;
+.book-direction span {
+  display: block;
 
-  margin-bottom: 2px;
+  margin-left: 8px;
 }
 
 
-/* Offer */
+/* Offer Services */
 
 .offer-direction {
-  right: 67px;
+  right: 70px;
 
-  bottom: 18px;
-
-  align-items: flex-end;
+  top: 360px;
 
   text-align: right;
 }
 
-.offer-direction .curved-arrow {
-  margin-right: 5px;
+.offer-direction span {
+  display: block;
 
-  margin-bottom: 2px;
+  margin-right: 0;
 }
 
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .book-direction {
+    left: 45px;
+
+    top: 355px;
+  }
+
+  .offer-direction {
+    right: 30px;
+
+    top: 355px;
+  }
+
+  .service-direction {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .service-direction {
+    font-size: 15px;
+  }
+
+  .book-direction {
+    left: 4px;
+
+    top: 285px;
+  }
+
+  .book-direction span {
+    margin-left: 8px;
+  }
+
+  .offer-direction {
+    right: 4px;
+
+    top: 285px;
+  }
+
+  .offer-direction span {
+    margin-right: 0;
+  }
+  .flaticon-arrow {
+  display: none;
+}
+}
+
+
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .service-direction {
+    font-size: 14px;
+  }
+
+  .book-direction {
+    left: 0;
+
+    top: 280px;
+  }
+
+  .offer-direction {
+    right: 0;
+
+    top: 280px;
+  }
+}
 
 /* =========================================
    STATS
@@ -1124,27 +1191,26 @@ button {
 
   /* Directions */
 
-  .service-direction {
-    font-size: 15px;
-  }
+.service-direction {
+  font-size: 15px;
+}
 
-  .curved-arrow {
-    width: 95px;
+/* Hide curved arrows on mobile only */
+.flaticon-arrow {
+  display: none;
+}
 
-    height: 75px;
-  }
+.book-direction {
+  left: 15px;
+  top: 350px;
+  bottom: auto;
+}
 
-  .book-direction {
-    left: 15px;
-
-    bottom: 10px;
-  }
-
-  .offer-direction {
-    right: 15px;
-
-    bottom: 10px;
-  }
+.offer-direction {
+  right: 15px;
+  top: 350px;
+  bottom: auto;
+}
 
 
   /* Stats */

@@ -3,6 +3,8 @@ import "./App.css";
 import doovlyLogo from "./assets/doovly-logo.png";
 import doovlyPhone from "./assets/doovly-phone.png";
 import verifiedUsersIcon from "./assets/doovly-verified-users-icon.png";
+import bookArrow from "./assets/book-arrow.png";
+import offerArrow from "./assets/offer-arrow.png";
 
 
 /* =========================================
@@ -40,68 +42,6 @@ function GooglePlayIcon() {
 }
 
 
-/* =========================================
-   CURVED BOOK ARROW
-========================================= */
-
-function BookArrow() {
-  return (
-    <svg
-      className="curved-arrow book-arrow"
-      viewBox="0 0 150 110"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M12 91C25 68 46 54 72 51C99 48 120 34 132 12"
-        stroke="#087D42"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M118 13L132 12L128 27"
-        stroke="#087D42"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-
-/* =========================================
-   CURVED OFFER ARROW
-========================================= */
-
-function OfferArrow() {
-  return (
-    <svg
-      className="curved-arrow offer-arrow"
-      viewBox="0 0 150 110"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M138 91C125 68 104 54 78 51C51 48 30 34 18 12"
-        stroke="#087D42"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-
-      <path
-        d="M32 13L18 12L22 27"
-        stroke="#087D42"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 
 function App() {
@@ -335,7 +275,11 @@ function App() {
 
               <div className="service-direction book-direction">
 
-                <BookArrow />
+                <img
+                  src={bookArrow}
+                  alt=""
+                  className="flaticon-arrow book-arrow"
+                />
 
                 <span>
                   Book
@@ -352,7 +296,11 @@ function App() {
 
               <div className="service-direction offer-direction">
 
-                <OfferArrow />
+                <img
+                  src={offerArrow}
+                  alt=""
+                  className="flaticon-arrow offer-arrow"
+                />
 
                 <span>
                   Offer
